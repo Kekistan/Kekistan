@@ -82,8 +82,12 @@ function resetEnemies() {
 	}
 }
 
-function clear() {	
+function clearUnits() {
 	units = [ ];
+
+	data.points.current = data.points.total;
+	updatePoints();
+
 	clearScreen();
 	drawUnits();
 }
